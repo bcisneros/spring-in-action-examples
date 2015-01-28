@@ -28,5 +28,11 @@ public class App {
         Ticket ticketTwo = (Ticket) context.getBean("ticket");
 
         System.out.println("Prototype scope get a new instace from tickets? " + (ticketOne != ticketTwo));
+
+        performer = (Performer) context.getBean("kenny");
+        performer.perform();
+
+        performer = (Performer) context.getBean("kenny2");
+        performer.perform();
     }
 }

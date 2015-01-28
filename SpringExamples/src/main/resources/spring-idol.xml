@@ -18,4 +18,15 @@
 
     <bean id="auditorium" class="com.springinaction.springidol.Auditorium" init-method="turnOnLights"
           destroy-method="turnOffLights"/>
+    <bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="age" value="37"/>
+    </bean>
+
+    <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
+
+    <bean id="kenny2" class="com.springinaction.springidol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument" ref="saxophone"/>
+    </bean>
 </beans>
