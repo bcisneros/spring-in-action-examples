@@ -41,11 +41,12 @@
 
     <bean id="hank" class="com.springinaction.springidol.OneManBand">
         <property name="instruments">
-            <list>
+            <set>
                 <ref bean="guitar"/>
                 <ref bean="cymbal"/>
                 <ref bean="harmonica"/>
-            </list>
+                <ref bean="harmonica"/>
+            </set>
         </property>
     </bean>
 </beans>
