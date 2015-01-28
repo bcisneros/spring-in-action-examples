@@ -33,10 +33,15 @@
     <bean id="guitar" class="com.springinaction.springidol.Guitar"/>
     <bean id="cymbal" class="com.springinaction.springidol.Cymbal"/>
     <bean id="harmonica" class="com.springinaction.springidol.Harmonica"/>
+    <bean id="instrument" class="com.springinaction.springidol.Saxophone"/>
 
     <bean id="kenny2" class="com.springinaction.springidol.Instrumentalist">
         <property name="song" value="Jingle Bells"/>
         <property name="instrument" ref="piano"/>
+    </bean>
+
+    <bean id="kenny3" class="com.springinaction.springidol.Instrumentalist" autowire="byName">
+        <property name="song" value="Jingle Bells" />
     </bean>
 
     <bean id="hank" class="com.springinaction.springidol.OneManBand">
