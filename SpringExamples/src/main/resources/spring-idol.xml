@@ -9,7 +9,9 @@
     <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
     <bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler">
         <constructor-arg value="15"/>
-        <constructor-arg ref="sonnet29"/>
+        <constructor-arg>
+            <bean class="com.springinaction.springidol.Sonnet29"/>
+        </constructor-arg>
     </bean>
 
     <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
@@ -21,6 +23,9 @@
     <bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
         <property name="song" value="Jingle Bells"/>
         <property name="age" value="37"/>
+        <property name="instrument">
+            <bean class="com.springinaction.springidol.Saxophone"/>
+        </property>
     </bean>
 
     <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
