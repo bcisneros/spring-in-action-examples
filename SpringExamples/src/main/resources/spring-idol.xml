@@ -24,9 +24,10 @@
     </bean>
 
     <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
+    <bean id="piano" class="com.springinaction.springidol.Piano"/>
 
     <bean id="kenny2" class="com.springinaction.springidol.Instrumentalist">
         <property name="song" value="Jingle Bells"/>
-        <property name="instrument" ref="saxophone"/>
+        <property name="instrument" ref="piano"/>
     </bean>
 </beans>
