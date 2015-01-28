@@ -2,6 +2,7 @@ package com.springinaction;
 
 import com.springinaction.springidol.Performer;
 import com.springinaction.springidol.Stage;
+import com.springinaction.springidol.Ticket;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -21,5 +22,12 @@ public class App {
         Stage sameStage = (Stage) context.getBean("theStage");
 
         System.out.println("Both Stages are the same object? " + (theStage == sameStage));
+
+        System.out.println("Getting Ticket objects");
+        Ticket ticketOne = (Ticket) context.getBean("ticket");
+        Ticket ticketTwo = (Ticket) context.getBean("ticket");
+
+        System.out.println("Prototype scope get a new instace from tickets? " + (ticketOne != ticketTwo));
+
     }
 }
