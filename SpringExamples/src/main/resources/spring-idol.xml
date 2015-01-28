@@ -11,4 +11,6 @@
         <constructor-arg value="15"/>
         <constructor-arg ref="sonnet29"/>
     </bean>
+
+    <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance" />
 </beans>
