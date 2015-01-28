@@ -1,12 +1,14 @@
 package com.springinaction.springidol;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Instrumentalist implements Performer {
 
     private String song;
     private int age;
     @Autowired
+    @Qualifier("guitar")
     private Instrument instrument;
 
     public int getAge() {

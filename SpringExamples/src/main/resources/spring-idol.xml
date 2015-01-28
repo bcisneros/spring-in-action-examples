@@ -40,7 +40,7 @@
 
     <bean id="saxophone" class="com.springinaction.springidol.Saxophone" autowire-candidate="false"/>
     <bean id="piano" class="com.springinaction.springidol.Piano" autowire-candidate="false"/>
-    <bean id="guitar" class="com.springinaction.springidol.Guitar" autowire-candidate="false"/>
+    <bean id="guitar" class="com.springinaction.springidol.Guitar"/>
     <bean id="cymbal" class="com.springinaction.springidol.Cymbal" autowire-candidate="false"/>
     <bean id="harmonica" class="com.springinaction.springidol.Harmonica" autowire-candidate="false"/>
     <bean id="instrument" class="com.springinaction.springidol.Saxophone"/>
@@ -54,9 +54,9 @@
         <property name="song" value="Jingle Bells"/>
     </bean>
 
-    <bean id="kenny4" class="com.springinaction.springidol.Instrumentalist" autowire="byType">
+    <!--<bean id="kenny4" class="com.springinaction.springidol.Instrumentalist" autowire="byType">
         <property name="song" value="Hakuna Matatta"/>
-    </bean>
+    </bean>-->
 
     <bean id="hank" class="com.springinaction.springidol.OneManBand">
         <property name="instruments">
