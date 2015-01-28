@@ -34,5 +34,8 @@ public class App {
 
         performer = (Performer) context.getBean("kenny2");
         performer.perform();
+
+        performer = (Performer) context.getBean("hank");
+        performer.perform();
     }
 }
