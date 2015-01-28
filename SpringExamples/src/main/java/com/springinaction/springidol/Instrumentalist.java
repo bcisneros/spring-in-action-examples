@@ -1,15 +1,13 @@
 package com.springinaction.springidol;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Instrumentalist implements Performer {
 
     private String song;
     private int age;
-    private Instrument instrument = new Instrument() {
-        @Override
-        public void play() {
-            System.out.println("Default instrument");
-        }
-    };
+    @Autowired
+    private Instrument instrument;
 
     public int getAge() {
         return age;
