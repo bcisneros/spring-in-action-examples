@@ -49,4 +49,14 @@
             </set>
         </property>
     </bean>
+
+    <bean id="hank2" class="com.springinaction.springidol.OneManBandMapped">
+        <property name="instruments">
+            <map>
+                <entry key="GUITAR" value-ref="guitar" />
+                <entry key="CYMBAL" value-ref="cymbal" />
+                <entry key="HARMONICA" value-ref="harmonica" />
+            </map>
+        </property>
+    </bean>
 </beans>

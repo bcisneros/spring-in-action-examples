@@ -37,5 +37,8 @@ public class App {
 
         performer = (Performer) context.getBean("hank");
         performer.perform();
+
+        performer = (Performer) context.getBean("hank2");
+        performer.perform();
     }
 }
