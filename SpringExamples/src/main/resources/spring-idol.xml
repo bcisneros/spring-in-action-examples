@@ -6,6 +6,9 @@
     <bean id="duke" class="com.springinaction.springidol.Juggler">
         <constructor-arg value="15"/>
     </bean>
+
+    <bean id="duke2" class="com.springinaction.springidol.PoeticJuggler" autowire="constructor"/>
+
     <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
     <bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler">
         <constructor-arg value="15"/>
