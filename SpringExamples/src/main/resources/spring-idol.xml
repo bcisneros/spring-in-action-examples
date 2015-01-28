@@ -28,11 +28,11 @@
         </property>
     </bean>
 
-    <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
-    <bean id="piano" class="com.springinaction.springidol.Piano"/>
-    <bean id="guitar" class="com.springinaction.springidol.Guitar"/>
-    <bean id="cymbal" class="com.springinaction.springidol.Cymbal"/>
-    <bean id="harmonica" class="com.springinaction.springidol.Harmonica"/>
+    <bean id="saxophone" class="com.springinaction.springidol.Saxophone" autowire-candidate="false"/>
+    <bean id="piano" class="com.springinaction.springidol.Piano" autowire-candidate="false"/>
+    <bean id="guitar" class="com.springinaction.springidol.Guitar" autowire-candidate="false"/>
+    <bean id="cymbal" class="com.springinaction.springidol.Cymbal" autowire-candidate="false"/>
+    <bean id="harmonica" class="com.springinaction.springidol.Harmonica" autowire-candidate="false"/>
     <bean id="instrument" class="com.springinaction.springidol.Saxophone"/>
 
     <bean id="kenny2" class="com.springinaction.springidol.Instrumentalist">
@@ -41,7 +41,11 @@
     </bean>
 
     <bean id="kenny3" class="com.springinaction.springidol.Instrumentalist" autowire="byName">
-        <property name="song" value="Jingle Bells" />
+        <property name="song" value="Jingle Bells"/>
+    </bean>
+
+    <bean id="kenny4" class="com.springinaction.springidol.Instrumentalist" autowire="byType">
+        <property name="song" value="Hakuna Matatta" />
     </bean>
 
     <bean id="hank" class="com.springinaction.springidol.OneManBand">
