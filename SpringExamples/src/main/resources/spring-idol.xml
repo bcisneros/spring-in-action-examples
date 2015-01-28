@@ -12,7 +12,10 @@
         <constructor-arg ref="sonnet29"/>
     </bean>
 
-    <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance" />
+    <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
 
-    <bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype" />
+    <bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
+
+    <bean id="auditorium" class="com.springinaction.springidol.Auditorium" init-method="turnOnLights"
+          destroy-method="turnOffLights"/>
 </beans>
